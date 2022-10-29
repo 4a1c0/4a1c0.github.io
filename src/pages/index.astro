@@ -1,36 +1,40 @@
 ---
 import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
+
 ---
+<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
-
-<Layout title="Welcome to Astro.">
+<Layout title="IEEE Sensors 2022: Reflective-Mode Phase-Variation Permittivity Sensors Based On Coupled Resonators">
 	<main>
-		<h1>Welcome to <strong>Astro</strong></h1>
+
+		<img id="image" src="/assets/pcasac_reduced_white_bg.svg"width="270" alt="Pau" />
+	
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			
+			<strong>Pau Casacuberta</strong>: (GS'22) was born in Sabadell (Barcelona), Spain, in 1997. He received the Bachelor’s Degree in Electronic Telecommunications Engineering and Computer Engineering from the Universitat Autònoma de Barcelona (UAB) in 2020, and the master’s degree in Telecommunications Engineering in 2022. He received the Collaboration fellowship by the Spanish Government in 2019 for developing his Bachelor’s Thesis in highly sensitive microwave sensors based in stepped impedance structures. Furthermore, he is currently working in the elaboration of his PhD, which is focused on the development of microwave sensors for the characterization of the composition of multicomponent liquid substances, with a research grant from FPU Program of the Universities Spanish Ministry.
+
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				href="https://epapers.org/sensors2022/ESR/paper_details.php?paper_id=2159"
+				title="ORCiD"
+				body="Article entry in the Epapers page of the IEEE Sensors 2022 Conference."
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				href="/assets/2159.pdf"
+				title="Paper Download"
+				body="Sumbit done to the IEEE Sensors 2022 conference in PDF format."
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
+				href="assets/IEEE_Sensors_2022_PC_600dpi_compressed.pdf"
+				title="Poster Download"
+				body="Download the PDF verison of the poster."
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="WHOVA:pau.casacuberta@uab.cat"
+				title="Coresponding author"
+				body="Pau.Casacuberta@uab.cat"
 			/>
 		</ul>
 	</main>
@@ -40,14 +44,19 @@ import Layout from '../layouts/Layout.astro';
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 80ch;
 	}
 	h1 {
+		max-width: 60ch;
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
 	}
-	
+	#image {
+		float: left;
+		padding: 2rem 2rem 1rem 1rem;
+	}
+		
 	.instructions {
 		line-height: 1.6;
 		margin: 1rem 0;
@@ -68,9 +77,15 @@ import Layout from '../layouts/Layout.astro';
 	.instructions strong {
 		color: rgb(var(--accent));
 	}
+	.title-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
 	.link-card-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
 		gap: 1rem;
 		padding: 0;
 	}
