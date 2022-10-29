@@ -1,0 +1,94 @@
+---
+import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
+
+---
+
+
+<Layout title="IEEE Sensors 2022: Reflective-Mode Phase-Variation Permittivity Sensors Based On Coupled Resonators">
+	<main>
+		<img id="image" src="/assets/poster_sens_vect.svg "width="275" alt="Sensor" />
+		<p> </p>
+		<h1>Reflective-Mode <br>
+			Phase-Variation Permittivity Sensors Based On Coupled Resonators </h1>
+		<h2> </h2>
+
+
+		<p class="instructions">
+			This paper presents a <strong>novel strategy</strong> for the implementation of highly sensitive reflective-mode (one-port) phase-variation permittivity sensors based on <strong>coupled resonators</strong> (the sensing elements).
+
+
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://epapers.org/sensors2022/ESR/paper_details.php?paper_id=2159"
+				title="Epapers Information Page"
+				body="Article entry in the Epapers page of the IEEE Sensors 2022 Conference."
+			/>
+			<Card
+				href="/assets/2159.pdf"
+				title="Paper Download"
+				body="Sumbit done to the IEEE Sensors 2022 conference in PDF format."
+			/>
+			<Card
+				href="assets/IEEE_Sensors_2022_PC_600dpi_compressed.pdf"
+				title="Poster Download"
+				body="Download the PDF verison of the poster."
+			/>
+			<Card
+				href="WHOVA:pau.casacuberta@uab.cat"
+				title="Coresponding author"
+				body="Pau.Casacuberta@uab.cat"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 80ch;
+	}
+	h1 {
+		max-width: 60ch;
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	#image {
+		-webkit-shape-outside: url("/assets/poster_sens_vect.svg");
+		shape-outside: url("/assets/poster_sens_vect.svg");
+		-webkit-shape-image-threshold: 0.1;
+		shape-image-threshold: 0.1;
+		float: left;
+		padding: 0rem 2rem 2rem 1rem;
+	}
+		
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		color: white;
+		background-color: rgba(0, 0, 0, 0.388);
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
